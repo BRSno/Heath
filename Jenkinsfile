@@ -11,7 +11,7 @@ pipeline {
 
         stage('Git') {
           steps {
-            git(poll: true, url: 'https://github.com/BRSno/Heath', branch: 'main')
+            git(poll: true, url: 'https://github.com/BRSno/Heath', branch: 'main', changelog: true)
           }
         }
 
