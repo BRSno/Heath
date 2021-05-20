@@ -13,6 +13,7 @@ pipeline {
         stage('Git') {
           steps {
             git(poll: true, url: 'https://github.com/BRSno/Heath', branch: 'main', changelog: true)
+            snDevOpsArtifact(enabled: true, ignoreErrors: true, artifactsPayload: 'https://rileynow.jfrog.io/artifactory/default-maven-virtual/')
           }
         }
 
