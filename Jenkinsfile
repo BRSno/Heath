@@ -21,7 +21,7 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Test'
-        snDevOpsChange(enabled: true)
+        snDevOpsChange(enabled: true, ignoreErrors: true)
       }
     }
 
