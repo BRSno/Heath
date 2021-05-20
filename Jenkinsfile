@@ -9,7 +9,7 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('Git') {
           steps {
             git(poll: true, url: 'https://github.com/BRSno/Heath', branch: 'main')
           }
@@ -21,6 +21,7 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Test'
+        snDevOpsChange(enabled: true)
       }
     }
 
