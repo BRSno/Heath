@@ -6,6 +6,7 @@ pipeline {
         stage('Build') {
           steps {
             echo 'Build'
+            snDevOpsStep(enabled: true)
           }
         }
 
@@ -22,12 +23,14 @@ pipeline {
       steps {
         echo 'Test'
         snDevOpsChange(enabled: true, ignoreErrors: true)
+        snDevOpsStep(enabled: true)
       }
     }
 
     stage('Deploy') {
       steps {
         echo 'Deploy'
+        snDevOpsStep(enabled: true)
       }
     }
 
