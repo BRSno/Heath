@@ -31,7 +31,7 @@ pipeline {
       steps {
         echo 'Deploy'
         snDevOpsStep(enabled: true)
-        snDevOpsChange(enabled: true, ignoreErrors: true)
+        snDevOpsChange(enabled: true)
       }
     }
 
